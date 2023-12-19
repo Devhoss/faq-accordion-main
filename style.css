@@ -20,7 +20,7 @@ body {
 }
 
 .background-img {
-  background-image: url("/assets/images/background-pattern-mobile.svg");
+  background-image: url("./assets/images/background-pattern-mobile.svg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -115,12 +115,12 @@ body {
 .attribution a {
   color: hsl(228, 45%, 44%);
   text-decoration: none;
-  
+
 }
 
 @media (min-width: 640px) {
   .background-img {
-    background-image: url("/assets/images/background-pattern-desktop.svg");
+    background-image: url("./assets/images/background-pattern-desktop.svg");
   }
 
   .faq-container {
