@@ -1,0 +1,149 @@
+:root {
+  --transition: all 0.3s linear;
+  --white: hsl(0, 0%, 100%);
+  --light-pink: hsl(275, 100%, 97%);
+  --grayish-purple: hsl(292, 16%, 49%);
+  --dark-purple: hsl(281, 83%, 54%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Work Sans", sans-serif;
+  background: var(--light-pink);
+}
+
+.background-img {
+  background-image: url("/assets/images/background-pattern-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 17rem;
+}
+
+.faq-container {
+  border-radius: 10px;
+  position: relative;
+  bottom: 170px;
+  background-color: var(--white);
+  border-radius: 10px;
+  margin: 1rem;
+  padding: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.faq-title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 4rem;
+  margin-top: 1rem;
+}
+
+.logo {
+  width: 2rem;
+}
+
+.question-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
+  transition: var(--transition);
+}
+
+.question-title:hover {
+  color: var(--dark-purple);
+  cursor: pointer;
+}
+
+.question-title p {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.question-btn {
+  width: 50%;
+  background: transparent;
+  border: none;
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.question {
+  margin-bottom: 2rem;
+}
+
+.question-answer {
+  color: var(--grayish-purple);
+  display: none;
+  padding-bottom: 1rem;
+}
+
+/* Show/Hide answer */
+.minus-icon {
+  display: none;
+}
+
+.show-text .question-answer {
+  display: block;
+}
+
+.show-text .minus-icon {
+  display: inline;
+}
+
+.show-text .plus-icon {
+  display: none;
+}
+
+.attribution {
+  font-size: 1rem;
+  text-align: center;
+  padding-bottom: 1rem;
+  padding-top: 0;
+  margin-top: 0;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+  text-decoration: none;
+  
+}
+
+@media (min-width: 640px) {
+  .background-img {
+    background-image: url("/assets/images/background-pattern-desktop.svg");
+  }
+
+  .faq-container {
+    margin: 0 7rem;
+    /* border: 2px solid red; */
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .faq-title h1 {
+    font-size: 2.5rem;
+  }
+
+  .question-title p {
+    font-size: 1.2rem;
+    width: 100%;
+  }
+
+  .question {
+    margin-bottom: 1.5rem;
+  }
+
+  .answer {
+    font-size: 1.2rem;
+  }
+}
